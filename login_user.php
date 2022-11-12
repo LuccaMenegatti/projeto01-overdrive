@@ -18,10 +18,10 @@
                     <img src="imagens/logo.png" class="logo" alt="Logo Overdrive">
                 </div>
                 <p>Seja bem vindo(a) ao projeto CRUD, insira seus dados para continuar:</p>
-                <form action="login.php" method="post" autocomplete="on">
+                <form action="login_controller.php" method="post" autocomplete="on">
                     <div class="campo">
                         <i class="material-icons">person</i>
-                        <input type="email" name="login" id="ilogin" placeholder="Insira seu CPF" 
+                        <input type="text" name="login" id="login" placeholder="Insira seu CPF" 
                         autocomplete="email" required maxlength="30"> 
                         <label for="ilogin">Login</label>
                     </div>

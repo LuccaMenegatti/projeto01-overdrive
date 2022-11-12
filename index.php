@@ -18,10 +18,10 @@
                     <img src="imagens/logo.png" class="logo" alt="Logo Overdrive">
                 </div>
                 <p>Seja bem vindo(a) ao projeto CRUD, insira seus dados para continuar:</p>
-                <form action="login.php" method="post" autocomplete="on">
+                <form action="index.php" method="post" autocomplete="on">
                     <div class="campo">
                         <i class="material-icons">person</i>
-                        <input type="email" name="login" id="ilogin" placeholder="Insira seu login de ADM" 
+                        <input type="email" name="login" id="login" placeholder="Insira seu login de ADM" 
                         autocomplete="email" required maxlength="30"> 
                         <label for="ilogin">Login</label>
                     </div>
@@ -37,5 +37,36 @@
             </div>
         </section>
     </main>
+    <!-- -=-=-=-=-=-=-=-=-=- VALIDAÇÃO DE CONTA -=-=-=-=-=-=-=-=-=--->
+
+    <?php
+            if (isset($_POST['login'])) {
+              $login = $_POST['login'];
+              $senha = $_POST['senha'];
+
+              include_once "restrito/conexao.php";
+              $sql = "SELECT * from adm WHERE login = '$login' AND senha = '$senha'";
+
+              if ($result = mysqli_query($conn, $sql)) {
+                $num_registros = mysqli_num_rows($result);
+                if ($num_registros == 1) {
+                  $linha = mysqli_fetch_assoc($result);
+
+
+                  if (($login == $linha['login']) and ($senha == $linha['senha'])) {
+                    session_start();
+                    $_SESSION['cod_usuario'] = $linha["id_adm"];
+                    header("location: restrito");
+                  } else {
+                    echo "Login Invalido";
+                  }
+                } else {
+                  echo "Login ou senha não encontrados ou Invalido!";
+                }
+              } else {
+                echo "Nenhum resultado do Banco de Dados";
+              }
+            }
+    ?>
 </body>
 </html>
