@@ -2,7 +2,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$bd = "project1_overdrive";
+$bd = "empresa";
 
 $conn = mysqli_connect($server, $user, $pass, $bd);
 

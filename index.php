@@ -56,7 +56,7 @@
                   if (($login == $linha['login']) and ($senha == $linha['senha'])) {
                     session_start();
                     $_SESSION['cod_usuario'] = $linha["id_adm"];
-                    header("location: restrito");
+                    header("location: restrito/index.php");
                   } else {
                     echo "Login Invalido";
                   }
