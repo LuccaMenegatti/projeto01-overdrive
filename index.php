@@ -21,14 +21,14 @@
                 <form action="index.php" method="post" autocomplete="on">
                     <div class="campo">
                         <i class="material-icons">person</i>
-                        <input type="email" name="login" id="login" placeholder="Insira seu login de ADM" 
-                        autocomplete="email" required maxlength="30"> 
+                        <input type="text" name="login" id="login" placeholder="Insira seu login de ADM" 
+                         required maxlength="30"> 
                         <label for="ilogin">Login</label>
                     </div>
                     <div class="campo">
                         <i class="material-icons">vpn_key</i>
                         <input type="password" name="senha" id="isenha" placeholder="Insira sua senha" 
-                        autocomplete="current-password" required minlength="8"> 
+                        autocomplete="current-password" > 
                         <label for="isenha">Senha</label>
                     </div>
                     <input type="submit" value="Entrar"> 
@@ -45,7 +45,7 @@
               $senha = $_POST['senha'];
 
               include_once "restrito/conexao.php";
-              $sql = "SELECT * from adm WHERE login = '$login' AND senha = '$senha'";
+              $sql = "SELECT * from user_adm WHERE login = '$login' AND senha = '$senha'";
 
               if ($result = mysqli_query($conn, $sql)) {
                 $num_registros = mysqli_num_rows($result);
@@ -55,8 +55,8 @@
 
                   if (($login == $linha['login']) and ($senha == $linha['senha'])) {
                     session_start();
-                    $_SESSION['cod_usuario'] = $linha["id_adm"];
-                    header("location: restrito/index.php");
+                    $_SESSION['cod_usuario'] = $linha["id_usuario"];
+                    header("location: restrito");
                   } else {
                     echo "Login Invalido";
                   }
@@ -67,6 +67,6 @@
                 echo "Nenhum resultado do Banco de Dados";
               }
             }
-    ?>
+            ?>
 </body>
 </html>
