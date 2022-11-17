@@ -54,6 +54,10 @@
             <input type="text" class="form-control" name="telefone" required value="<?php echo $linha['telefone']; ?>">
           </div>
           <div class="mb-3">
+            <label for="telefone">Responsavel:</label>
+            <input type="text" class="form-control" name="responsavel" required>
+          </div>
+          <div class="mb-3">
             <input type="submit" name="editar" class="btn btn-success" value="Salvar Alterações">
             <input type="hidden" name="id" value="<?php echo $linha['cod_company']; ?>">
           </div>

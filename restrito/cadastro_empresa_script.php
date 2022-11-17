@@ -43,7 +43,7 @@ include_once 'conexao.php';
         $cnpj = mysqli_real_escape_string($conn, $_POST['cnpj']);
         $endereco = mysqli_real_escape_string($conn, $_POST['endereco']);
         $telefone = mysqli_real_escape_string($conn, $_POST['telefone']);
-        $responsavel = $_SESSION["cod_usuario"];
+        $responsavel = mysqli_real_escape_string($conn, $_POST['responsavel']);
 
         $sql_query_to_insert = "INSERT INTO company (nome, nome_fantasia, cnpj, endereco, telefone, responsavel) VALUES ('$nome', '$nome_fantasia', '$cnpj', '$endereco', '$telefone', '$responsavel')";
 
@@ -65,9 +65,9 @@ include_once 'conexao.php';
         $cnpj = mysqli_real_escape_string($conn, $_POST['cnpj']);
         $endereco = mysqli_real_escape_string($conn, $_POST['endereco']);
         $telefone = mysqli_real_escape_string($conn, $_POST['telefone']);
-        $responsavel = $_SESSION["cod_usuario"];
+        $responsavel = mysqli_real_escape_string($conn, $_POST['responsavel']);
 
-        $sql = "UPDATE company SET nome = '$nome', nome_fantasia = '$nome_fantasia', cnpj = '$cnpj', endereco = '$endereco', telefone = '$telefone' WHERE cod_company = $_POST[id]";
+        $sql = "UPDATE company SET nome = '$nome', nome_fantasia = '$nome_fantasia', cnpj = '$cnpj', endereco = '$endereco', telefone = '$telefone', responsavel = '$responsavel' WHERE cod_company = $_POST[id]";
 
         if (mysqli_query($conn, $sql)) {
           mensagem("Empresa atualizada com sucesso!", 'success');

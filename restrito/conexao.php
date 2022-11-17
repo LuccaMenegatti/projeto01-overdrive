@@ -2,7 +2,7 @@
 $server = "localhost";
 $user = "root";
 $pass = "";
-$bd = "empresa";
+$bd = "projeto01_crud";
 
 $conn = mysqli_connect($server, $user, $pass, $bd);
 

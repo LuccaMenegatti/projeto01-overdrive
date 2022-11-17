@@ -78,9 +78,10 @@
               $cnpj = $linha['cnpj'];
               $endereco = $linha['endereco'];
               $telefone = $linha['telefone'];
-              $sql_responsavel = "SELECT nome FROM user_adm WHERE id_usuario = $linha[responsavel]";
+              $responsavel = $linha['responsavel'];
+              $sql_responsavel = "SELECT * FROM user_adm";
               $exec = mysqli_query($conn, $sql_responsavel);
-              $responsavel = mysqli_fetch_assoc($exec);
+             
             ?>
               <tr>
                 <th scope='row'><?php echo $nome ?></th>
@@ -88,7 +89,7 @@
                 <td><?php echo $cnpj ?></td>
                 <td><?php echo $endereco ?></td>
                 <td><?php echo $telefone ?></td>
-                <td><?php echo $responsavel['nome'] ?></td>
+                <td><?php echo $responsavel?></td>
                 <td width=150px>
                   <a href='cadastro_empresa_edit.php?id=<?php echo $cod_company ?>' class='btn btn-success btn-sm'>Editar</a>
                   <a href='#' class='btn btn-danger btn-sm' data-bs-toggle='modal' data-bs-target='#confirma' onclick="<?php echo "pegar_dados('$nome', '$cod_company')" ?>">Excluir</a>

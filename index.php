@@ -23,13 +23,13 @@
                         <i class="material-icons">person</i>
                         <input type="text" name="login" id="login" placeholder="Insira seu login de ADM" 
                          required maxlength="30"> 
-                        <label for="ilogin">Login</label>
+                        <label for="login">Login</label>
                     </div>
                     <div class="campo">
                         <i class="material-icons">vpn_key</i>
-                        <input type="password" name="senha" id="isenha" placeholder="Insira sua senha" 
+                        <input type="password" name="senha" id="senha" placeholder="Insira sua senha" 
                         autocomplete="current-password" > 
-                        <label for="isenha">Senha</label>
+                        <label for="senha">Senha</label>
                     </div>
                     <input type="submit" value="Entrar"> 
                     <a href="login_user.php" class="botao">Logar como Usuario</a>
@@ -56,7 +56,7 @@
                   if (($login == $linha['login']) and ($senha == $linha['senha'])) {
                     session_start();
                     $_SESSION['cod_usuario'] = $linha["id_usuario"];
-                    header("location: restrito");
+                    header("location: restrito/index.php");
                   } else {
                     echo "Login Invalido";
                   }
@@ -70,3 +70,4 @@
             ?>
 </body>
 </html>
+

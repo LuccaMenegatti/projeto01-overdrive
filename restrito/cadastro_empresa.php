@@ -55,6 +55,10 @@ if (!isset($_SESSION['cod_usuario'])) {
             <label for="telefone">Telefone:</label>
             <input type="text" class="form-control" name="telefone" required>
           </div>
+          <div class="mb-3">
+            <label for="telefone">Responsavel:</label>
+            <input type="text" class="form-control" name="responsavel" required>
+          </div>
 
           <div class="mb-3">
             <input type="submit" class="btn btn-success" name="Cadastrar" value="Cadastrar">
