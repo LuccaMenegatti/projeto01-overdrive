@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilo_restrito/style.css">
     <title>Perfil</title>
 </head>
 <body>
@@ -36,6 +36,8 @@
 
 
   <main>
+
+  <h1>Perfil Usuário - <?= $usuario['nome'] ?></h1>
 
   <section id="table">
         <table class="table table-hover">
@@ -67,18 +69,12 @@
   </section>
 
         
-  <div id="botao"> 
-        <a href="../logout.php" class="btn btn-danger">Logout</a>
+  <div class="cent">
+        <a href="../logout.php" class="botlogout">Logout</a>
   </div>
+  
         
-
   </main>
-
-
-
-
-
-
   <script type="text/javascript">
     function pegar_dados(id, nome) {
       document.getElementById('nome_pessoa').innerHTML = nome;
@@ -86,20 +82,6 @@
       document.getElementById('cod_pessoa').value = id;
     }
   </script>
-
-
-
-
-
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>

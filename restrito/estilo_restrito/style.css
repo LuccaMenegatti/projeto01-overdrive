@@ -16,7 +16,7 @@ body, html {
 }
 
 nav{
-    background-image: linear-gradient(to bottom, #A60303, #590202);
+    background-color:#590202;
     height: 15vh;
     width: 100vw;
 }
@@ -34,6 +34,12 @@ div.logo{
     text-align: center;
 }
 
+h1{
+    text-align: center;
+    font-size: 2em;
+    margin: 10px;
+}
+
 section#table{
     margin-top: 20px;
 }
@@ -48,10 +54,37 @@ th, tr, td {
     text-align: center;
 }
 
-div#botao > a:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+div.cent{
+    text-align: center;
+    display: block;
+    position: relative
 }
 
+a.botlogout{
+    display: block;
+    position: absolute;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 25vw;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 25px;
+    background-color: #590202;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -0%);
+}
+    
+a.botlogout:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color:#A60303 ;
+}
+  
 
 
 
