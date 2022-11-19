@@ -8,7 +8,7 @@
     }
 ?>
 
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
@@ -23,7 +23,7 @@
 
   <?php
       $user_code = $_SESSION['cod_usuario'];
-      $sql = "SELECT * FROM usuarios WHERE cod_pessoa = $user_code";
+      $sql = "SELECT * FROM usuarios";
       $usuario = mysqli_query($conn, $sql);
       $usuario = mysqli_fetch_assoc($usuario);
   ?>
@@ -36,45 +36,54 @@
 
 
   <main>
+        <h1>Perfil Usuário</h1>
+        <section id="table">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">CNH</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Carro</th>
+                    <th scope="col">Empresa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $dados = mysqli_query($conn, $sql);
 
-  <h1>Perfil Usuário - <?= $usuario['nome'] ?></h1>
+                  while ($linha = mysqli_fetch_assoc($dados)) {
+                  $cod_pessoa = $linha['cod_pessoa'];
+                  $nome = $linha['nome'];
+                  $cpf = $linha['cpf'];
+                  $cnh = $linha['cnh'];
+                  $endereco = $linha['endereco'];
+                  $telefone = $linha['telefone'];
+                  $carro = $linha['carro'];
+                  $empresa = $linha['empresa'];
 
-  <section id="table">
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">CPF</th>
-              <th scope="col">CNH</th>
-              <th scope="col">Endereço</th>
-              <th scope="col">Telefone</th>
-              <th scope="col">Carro</th>
-              <th scope="col">Empresa</th>
-            </tr>
-          </thead>
-
-          <!-- -=-=-=-=-=-=-=-=-=- PUXANDO OS DADOS DO BANCO -=-=-=-=-=-=-=-=-=- -->
-          <tbody>
-          <tr>
-            <th scope='row'><?= $usuario['nome'] ?></th>
-              <td><?= $usuario['cpf'] ?></td>
-              <td><?= $usuario['cnh'] ?></td>
-              <td><?= $usuario['telefone'] ?></td>
-              <td><?= $usuario['endereco'] ?></td>
-              <td><?= $usuario['carro'] ?></td>
-              <td><?= $usuario['empresa'] ?></td>
-            </tr>
-          </tbody>
-        </table>
-  </section>
-
-        
-  <div class="cent">
-        <a href="../logout.php" class="botlogout">Logout</a>
-  </div>
-  
-        
+                  echo "<tr>
+                      <th scope='row'>$nome</th>
+                      <td>$cpf</td>
+                      <td>$cnh</td>
+                      <td>$endereco</td>
+                      <td>$telefone</td>
+                      <td>$carro</td>
+                      <td>$empresa</td>
+                      </tr>";
+                  }
+                  ?>
+            
+                </tbody>
+              </table>
+        </section>        
+        <div class="cent">
+              <a href="../logout.php" class="botlogout">Logout</a>
+        </div>     
   </main>
+
   <script type="text/javascript">
     function pegar_dados(id, nome) {
       document.getElementById('nome_pessoa').innerHTML = nome;
