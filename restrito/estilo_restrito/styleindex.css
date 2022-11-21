@@ -46,7 +46,7 @@ nav > a:hover{
 }
 
 body{
-    background-color: lightgray;
+    background-color: rgb(150, 150, 150);
 }
 
 main{
@@ -67,4 +67,43 @@ main p{
     text-indent: 30px;
     line-height: 2em;
     font-size: 1em;
+}
+
+a.botao1 {
+   
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    margin-top: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a.botao2 {
+    
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    width: 100%;
+    height: 40px;
+    padding: 7px;
+    margin-top: 5px;
+    background-color: white;
+    color: #590202;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+i {
+    color: white;
+    font-size: 1.8em;
+    width: 30px;
+    padding-bottom: 0px;
 }

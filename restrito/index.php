@@ -20,6 +20,7 @@ if(Acesso::validaUsuario($id_usuario) == false) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="estilo_restrito/styleindex.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Admin</title>
 </head>
 
@@ -32,8 +33,8 @@ if(Acesso::validaUsuario($id_usuario) == false) {
 </header>
 <nav>
     <a href="../logout.php">Sair</a>
-    <a href="pesquisar_empresa.php">Empresas</a>
-    <a href="pesquisa.php">Usuarios</a>
+    <a href="pesquisar_empresa.php"> <i class="material-icons">search</i> Empresas</a>
+    <a href="pesquisa.php"><i class="material-icons">search</i> Usuarios</a>
 </nav>
 
 <main>
@@ -44,8 +45,16 @@ if(Acesso::validaUsuario($id_usuario) == false) {
              cadastro de usuarios e empresas. Você é o Admin deste sistema, portanto tem acesso a operações como 
              cadastrar, excluir, e editar usuarios e empresas, faça bom proveito de seus beneficios!</p>
 
-            <a href="cadastro_empresa.php">Cadastrar Empresa</a>
-            <a href="cadastro.php">Cadastrar Usuários</a>
+             <p>
+               Um administrador é um profissional responsável pela tomada de decisão e condução de
+               estratégias no meio corporativo. Por ele, passam ações de planejamento, organização e
+               execução nas mais variadas áreas do negócio, incluindo a gestão de recursos financeiros,
+               tecnológicos, humanos e materiais, portanto faça bom uso de seus beneficios:
+             </p><br>
+
+
+            <a href="cadastro_empresa.php" class="botao1">Cadastrar Empresa</a>
+            <a href="cadastro.php" class="botao2">Cadastrar Usuários</a>
            
           </div>
    
