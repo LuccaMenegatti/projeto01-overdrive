@@ -14,7 +14,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="images/icons/icone-logo.png">
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="estilo_restrito/styleindex.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
