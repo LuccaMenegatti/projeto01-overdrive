@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+body, html {
+    background-image: url('../../imagens/background001.jpg');
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
 header{
     background-color:#590202;
     height: 12vh;
@@ -85,6 +93,20 @@ a.botao1 {
     text-decoration: none;
 }
 
+button.botao1 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 55px;
+    padding: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+
 a.botao2 {
     
     text-align: center;
@@ -101,9 +123,88 @@ a.botao2 {
     text-decoration: none;
 }
 
+a.botao3 {
+    
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    padding: 5px;
+    background-color: white;
+    color: #590202;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+button.botao3 {
+    
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    width: 70px;
+    padding: 5px;
+    background-color: white;
+    color: #590202;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a.botao4 {
+   
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    padding: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+input.botao4 {
+   
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    width: 70px;
+    padding: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a.botao5 {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    width: 70%;
+    padding: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
 i {
     color: white;
     font-size: 1.8em;
     width: 30px;
     padding-bottom: 0px;
 }
+
