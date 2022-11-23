@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/*
+600px
+600px ate 768px
+778px ate 992px
+992px ate 1200px
+1200px +
+*/
+
+@media screen and (max-width: 992px){
+
+    a.botao3 {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bolder;
+        height: 40px;
+        padding: 5px;
+        background-color: white;
+        color: #590202;
+        border: 3px solid #590202;
+        border-radius: 7px;
+        text-decoration: none;
+    }
+
+    a.botao4 {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bolder;
+        height: 40px;
+        padding: 5px;
+        background-color: #590202;
+        color: white;
+        border: 3px solid #590202;
+        border-radius: 7px;
+        text-decoration: none;
+    }
+}
