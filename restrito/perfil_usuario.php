@@ -16,7 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="estilo_restrito/style.css">
+    <link rel="stylesheet" href="estilo_restrito/styleindex.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <title>Perfil</title>
 </head>
 <body>
@@ -28,16 +31,21 @@
       $usuario = mysqli_fetch_assoc($usuario);
   ?>
 
-  <nav> 
+  <header> 
       <div class="logo">
         <img src="../imagens/logo.png" class="logo" alt="Logo Overdrive">
       </div>
-  </nav>
+  </header>
+  <nav>
+
+  <a href="../logout.php">Encerrar Sessão</a>
+
+</nav>
 
 
   <main>
-        <h1>Perfil Usuário</h1>
         <section id="table">
+              <div class="table">
               <table class="table table-hover">
                 <thead>
                   <tr>
@@ -78,10 +86,8 @@
             
                 </tbody>
               </table>
-        </section>        
-        <div class="cent">
-              <a href="../logout.php" class="botlogout">Logout</a>
-        </div>     
+                </div>
+        </section>            
   </main>
 
   <script type="text/javascript">
@@ -91,6 +97,8 @@
       document.getElementById('cod_pessoa').value = id;
     }
   </script>
-</body>
 
+   <!-- Option 1: Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
 </html>

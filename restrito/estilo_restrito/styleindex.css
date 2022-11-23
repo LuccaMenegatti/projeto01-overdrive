@@ -13,6 +13,7 @@ body, html {
     position: relative;
     height: 100%;
     width: 100%;
+    overflow-x:hidden;
 }
 
 header{
@@ -75,6 +76,10 @@ main p{
     text-indent: 30px;
     line-height: 2em;
     font-size: 1em;
+}
+
+div.table{
+    overflow-x: scroll;
 }
 
 a.botao1 {
@@ -210,9 +215,22 @@ input.botao6 {
     text-decoration: none;
 }
 
+a.botao6 {
+   
+    text-align: center;
+    font-size: 1em;
+    font-weight: bolder;
+    height: 40px;
+    padding: 5px;
+    background-color: #590202;
+    color: white;
+    border: 3px solid #590202;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
 a:hover{
     text-decoration: underline;
-    color: white;
 }
 
 i {

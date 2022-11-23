@@ -59,6 +59,7 @@
       </form>
 
         <!-- -=-=-=-=-=-=-=-=-=- TABELA -=-=-=-=-=-=-=-=-=- -->
+        <div class="table">
         <table class="table table-hover">
           <thead>
             <tr>
@@ -106,6 +107,7 @@
 
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>

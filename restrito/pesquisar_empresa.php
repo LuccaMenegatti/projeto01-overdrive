@@ -64,6 +64,7 @@
           </div>
 
         <!-- -=-=-=-=-=-=-=-=-=- TABELA -=-=-=-=-=-=-=-=-=- -->
+        <div class="table">
         <table class="table table-hover">
           <thead>
             <tr>
@@ -128,6 +129,7 @@
             <?php } ?>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
