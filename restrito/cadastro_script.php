@@ -11,6 +11,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <title>Cadastro Usuário</title>
+
+  <style>
+
+body, html{
+  color: white;
+}
+
+</style>
 </head>
 
 <body>
@@ -21,7 +29,7 @@
       </div>
 </header>
 <nav>
-    <a href="index.php"> Voltar</a>
+  
 </nav>
 
 <main>
@@ -50,6 +58,7 @@
       }
 
       ?>
+      <a href="index.php" class="botao1">Voltar</a>
     </div>
   </div>
 </main>

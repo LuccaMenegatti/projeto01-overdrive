@@ -22,6 +22,14 @@ include_once 'conexao.php';
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <title>Cadastro Empresa</title>
+
+  <style>
+
+    body, html{
+      color: white;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -32,23 +40,16 @@ include_once 'conexao.php';
       </div>
 </header>
 <nav>
-    <a href="pesquisar_empresa.php"> Voltar</a>
+   
 </nav>
 
 
 <main>
   <div class="container">
     <div class="row">
-      <?php
+      <?php 
 
       if (isset($_POST['Cadastrar'])) {
-
-        // var_dump($_POST['nome']);
-        // var_dump($_POST['nome_fantasia']);
-        // var_dump($_POST['cnpj']);
-        // var_dump($_POST['endereco']);
-        // var_dump($_POST['telefone']);
-        // return;
 
         $nome = mysqli_real_escape_string($conn, $_POST['nome']);
         $nome_fantasia = mysqli_real_escape_string($conn, $_POST['nome_fantasia']);
@@ -69,7 +70,7 @@ include_once 'conexao.php';
       }
 
 
-      if (isset($_POST["editar"])) {
+      if (isset($_POST['editar'])) {
         $nome = mysqli_real_escape_string($conn, $_POST['nome']);
         $nome_fantasia = mysqli_real_escape_string($conn, $_POST['nome_fantasia']);
         $cnpj = mysqli_real_escape_string($conn, $_POST['cnpj']);
