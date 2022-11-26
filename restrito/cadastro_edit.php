@@ -71,11 +71,6 @@
             <input type="text" class="form-control" name="empresa" required value="<?php echo $linha['empresa']; ?>">
           </div>
           <div class="mb-3">
-            <label>Deseja tornar esse usuário administrador?</label>
-            <select class="form-control" name="adm">
-              <option value="false" selected>Não</option>
-              <option value="true">Sim</option>
-            </select>
           </div>
           <div class="mb-3">
             <input type="submit" class="botao6" value="Salvar Alterações">

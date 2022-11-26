@@ -117,7 +117,7 @@
                     </div>
                     <div class="modal-body">
                       <form action="excluir_empresa_script.php" method="POST">
-                        <p>Tem certeza que quer Excluir essa Empresa? <b id="nome">Nome da Empresa</b>?</p>
+                        <p>Tem certeza que quer Excluir esta empresa?</p>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="botao3" data-bs-dismiss="modal">Não</button>

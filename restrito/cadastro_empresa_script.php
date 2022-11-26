@@ -87,7 +87,7 @@ include_once 'conexao.php';
         }
       }
       ?>
-      <a href="index.php" class="botao1">Voltar</a>
+      <a href="pesquisar_empresa.php" class="botao1">Voltar</a>
     </div>
   </div>
 </main>

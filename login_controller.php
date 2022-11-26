@@ -6,7 +6,7 @@ if (isset($_POST['login'])) {
   
 
   $login = $_POST['login'];
-  $senha = $_POST['senha'];
+  $senha = md5($_POST['senha']);
 
   $sql = "SELECT * from usuarios WHERE cpf = '$login' AND senha = '$senha'";
 

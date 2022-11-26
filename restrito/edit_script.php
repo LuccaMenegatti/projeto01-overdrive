@@ -47,20 +47,7 @@ body, html{
       $empresa = $_POST['empresa'];
 
 
-      // COLOCAR USUARIO COMO ADM
-      if ($_POST['adm'] == 'true') {
-        $sql = "UPDATE `usuarios` set `nome` = '$nome', `cpf` = '$cpf', `cnh` = '$cnh', `endereco` = '$endereco', `telefone` = '$telefone', `carro` = '$carro', `empresa` = '$empresa' WHERE cod_pessoa = $id";
-
-        $senha = $cpf;
-        $senha = md5($senha);
-        $sql_adm = "INSERT INTO user_adm (nome, login, senha) VALUES ('$nome', '$cpf', '$senha')";
-        $exec_sql_adm = mysqli_query($conn, $sql_adm);
-        if (mysqli_query($conn, $sql)) {
-          mensagem("$nome alterado com sucesso!", 'success');
-        } else {
-          mensagem("$nome NÃO alterado!", 'danger');
-        }
-      } else {
+   
         $sql = "UPDATE `usuarios` set `nome` = '$nome', `cpf` = '$cpf', `cnh` = '$cnh', `endereco` = '$endereco', `telefone` = '$telefone', `carro` = '$carro', `empresa` = '$empresa' WHERE cod_pessoa = $id";
 
         if (mysqli_query($conn, $sql)) {
@@ -68,7 +55,7 @@ body, html{
         } else {
           mensagem("$nome NÃO alterado!", 'danger');
         }
-      }
+      
       ?>
       <a href="pesquisa.php" class="botao1">Voltar</a>
     </div>

@@ -42,7 +42,7 @@
     <?php
             if (isset($_POST['login'])) {
               $login = $_POST['login'];
-              $senha = $_POST['senha'];
+              $senha = md5($_POST['senha']);
 
               include_once "restrito/conexao.php";
               $sql = "SELECT * from user_adm WHERE login = '$login' AND senha = '$senha'";

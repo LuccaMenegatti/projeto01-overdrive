@@ -66,7 +66,7 @@
           </div>
           <div class="mb-3">
             <label for="telefone">Responsavel:</label>
-            <input type="text" class="form-control" name="responsavel" required>
+            <input type="text" class="form-control" name="responsavel" required value="<?php echo $linha['responsavel'];?>">
           </div>
           <div class="mb-3">
             <input type="submit" name="editar" class="botao6" value="Salvar Alterações">
