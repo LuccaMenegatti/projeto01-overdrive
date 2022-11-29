@@ -21,7 +21,7 @@ if (isset($_POST['login'])) {
       $linha = mysqli_fetch_assoc($result);
       if (($login == $linha['cpf']) and ($senha == $linha['senha'])) {
         session_start();
-        $_SESSION['cod_usuario'] = $linha["cod_pessoa"];
+        $_SESSION['cod_usuario'] = $linha['cod_pessoa'];
         header("location: restrito/perfil_usuario.php");
       } else {
         echo "Login Invalido";

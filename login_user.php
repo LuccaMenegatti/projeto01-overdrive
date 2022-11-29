@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/StyleLogin.css">
     <link rel="stylesheet" href="estilos/media-querie.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
     <title>Usuario</title>
 </head>
 <body>
@@ -21,8 +24,8 @@
                 <form action="login_controller.php" method="post" autocomplete="on">
                     <div class="campo">
                         <i class="material-icons">person</i>
-                        <input type="text" name="login" id="login" placeholder="Insira seu CPF" 
-                         required maxlength="30"> 
+                        <input type="text" name="login" id="cpf" placeholder="Insira seu CPF" autocomplete="off"
+                        maxlength="14"> 
                         <label for="login">CPF</label>
                     </div>
                     <div class="campo">
@@ -36,6 +39,9 @@
                 </form>
             </div>
         </section>
+        <script>
+            $("#cpf").mask("999.999.999-99");
+        </script>
     </main>
 </body>
 </html>
