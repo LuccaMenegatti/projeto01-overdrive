@@ -16,7 +16,9 @@
 
   <style>
   body, html{
-      color: white;
+
+    color: white;
+     
     }
 
   </style>
@@ -40,21 +42,22 @@
 
       $id = $_POST['id'];
 
-      // obtem o nome do usuario a ser excluido.
+      // obtem o nome do a ser excluido.
       $getName = "SELECT nome_fantasia FROM company WHERE cod_company = $id";
       $actualName = mysqli_query($conn, $getName);
       $nome_to_remove = mysqli_fetch_assoc($actualName);
 
       $nome_to_remove = $nome_to_remove['nome_fantasia'];
 
-      // deleta o usuario
-      $sql = "DELETE FROM company WHERE cod_company = $id";
+            // deleta
+            $sql = "DELETE FROM company WHERE cod_company = $id";
 
-      if (mysqli_query($conn, $sql)) {
-        mensagem("$nome_to_remove excluido com sucesso!", 'success');
-      } else {
-        mensagem("$nome_to_remove NÃO excluido!", 'danger');
-      }
+            if (mysqli_query($conn, $sql)) {
+              mensagem("$nome_to_remove excluido com sucesso!", 'success');
+            } else {
+              mensagem("$nome_to_remove NÃO excluido!", 'danger');
+            }
+            
 
       ?>
     </div>
