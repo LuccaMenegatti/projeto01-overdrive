@@ -37,38 +37,31 @@
 <main>
   <div class="container">
     <div class="row">
-      <?php
+    <?php
       include_once 'conexao.php';
 
       $id = $_POST['id'];
 
-      // obtem o nome do a ser excluido.
-      $getName = "SELECT nome_fantasia FROM company WHERE cod_company = $id";
+      // obtem o nome do usuario a ser excluido.
+      $getName = "SELECT nome_fantasia FROM company WHERE cod_company = '$id'";
       $actualName = mysqli_query($conn, $getName);
       $nome_to_remove = mysqli_fetch_assoc($actualName);
 
       $nome_to_remove = $nome_to_remove['nome_fantasia'];
 
-            // deleta
-            $sql = "DELETE FROM company WHERE cod_company = $id";
+      // deleta o usuario
+      $sql = "DELETE FROM company WHERE cod_company = '$id'";
 
-            if (mysqli_query($conn, $sql)) {
-              mensagem("$nome_to_remove excluido com sucesso!", 'success');
-            } else {
-              mensagem("$nome_to_remove NÃO excluido!", 'danger');
-            }
-            
+      if (mysqli_query($conn, $sql)) {
+        mensagem("$nome_to_remove excluido com sucesso!", 'success');
+      } else {
+        mensagem("$nome_to_remove NÃO excluido!", 'danger');
+      }
 
       ?>
     </div>
   </div>
 </main>
-
-
-
-
-
-
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

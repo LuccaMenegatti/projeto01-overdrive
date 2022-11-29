@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/StyleLogin.css">
     <link rel="stylesheet" href="estilos/media-querie.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <title>CRUD - Overdrive</title>
 </head>
 <body>
@@ -21,7 +23,7 @@
                 <form action="index.php" method="post" autocomplete="on">
                     <div class="campo">
                         <i class="material-icons">person</i>
-                        <input type="text" name="login" id="login" placeholder="Insira seu login de ADM" 
+                        <input type="text" name="login" id="cpf" placeholder="Insira seu login de ADM" 
                          required maxlength="30"> 
                         <label for="login">Login</label>
                     </div>
@@ -36,6 +38,10 @@
                 </form>
             </div>
         </section>
+
+        <script>
+          $("#cpf").mask("999.999.999-99");
+        </script>
     </main>
     <!-- -=-=-=-=-=-=-=-=-=- VALIDAÇÃO DE CONTA -=-=-=-=-=-=-=-=-=--->
 

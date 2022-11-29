@@ -33,7 +33,6 @@
 </header>
 <nav>
     <a href="index.php"> Voltar</a>
-    <a href="../logout.php">Sair</a>
     <a href="pesquisar_empresa.php"> <i class="material-icons">search</i> Empresas</a>
     <a href="pesquisa.php"><i class="material-icons">search</i> Usuarios</a>
 </nav>

@@ -22,6 +22,8 @@ if (!isset($_SESSION['cod_usuario'])) {
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="estilo_restrito/styleindex.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -37,7 +39,6 @@ if (!isset($_SESSION['cod_usuario'])) {
 </header>
 <nav>
     <a href="index.php"> Voltar</a>
-    <a href="../logout.php">Sair</a>
     <a href="pesquisar_empresa.php"> <i class="material-icons">search</i> Empresas</a>
     <a href="pesquisa.php"><i class="material-icons">search</i> Usuarios</a>
 </nav>
@@ -57,7 +58,7 @@ if (!isset($_SESSION['cod_usuario'])) {
           </div>
           <div class="mb-3">
             <label for="cnpj">CNPJ:</label>
-            <input type="text" class="form-control" name="cnpj" required>
+            <input type="text" class="form-control" name="cnpj" id="cnpj" required>
           </div>
           <div class="mb-3">
             <label for="endereco">Endereço:</label>
@@ -65,7 +66,7 @@ if (!isset($_SESSION['cod_usuario'])) {
           </div>
           <div class="mb-3">
             <label for="telefone">Telefone:</label>
-            <input type="text" class="form-control" name="telefone" required>
+            <input type="text" class="form-control" name="telefone" id="tel" required>
           </div>
           <div class="mb-3">
             <label for="telefone">Responsavel:</label>
@@ -79,6 +80,10 @@ if (!isset($_SESSION['cod_usuario'])) {
       </div>
     </div>
   </div>
+  <script>
+     $("#cnpj").mask("99.999.999/9999-99");
+     $("#tel").mask("(99) 99999-9999");
+  </script>
 </main>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->

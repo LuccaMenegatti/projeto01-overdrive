@@ -7,6 +7,8 @@
   <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="estilo_restrito/styleindex.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -48,7 +50,7 @@
           </div>
           <div class="mb-3">
             <label>CPF:</label>
-            <input type="text" class="form-control" name="cpf" required value="<?php echo $linha['cpf']; ?>">
+            <input type="text" id="cpf" class="form-control" name="cpf" required value="<?php echo $linha['cpf']; ?>">
           </div>
           <div class="mb-3">
             <label>CNH:</label>
@@ -60,7 +62,7 @@
           </div>
           <div class="mb-3">
             <label>Telefone:</label>
-            <input type="text" class="form-control" name="telefone" required value="<?php echo $linha['telefone']; ?>">
+            <input type="text" id="tel" class="form-control" name="telefone" required value="<?php echo $linha['telefone']; ?>">
           </div>
           <div class="mb-3">
             <label>Carro:</label>
@@ -80,6 +82,10 @@
       </div>
     </div>
   </div>
+  <script>
+    $("#cpf").mask("999.999.999-99");
+    $("#tel").mask("(99) 99999-9999");
+  </script>
 </main>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
