@@ -46,9 +46,10 @@
     <!-- -=-=-=-=-=-=-=-=-=- VALIDAÇÃO DE CONTA -=-=-=-=-=-=-=-=-=--->
 
     <?php
+    include_once 'restrito/conexao.php';
             if (isset($_POST['login'])) {
-              $login = $_POST['login'];
-              $senha = md5($_POST['senha']);
+              $login = mysqli_real_escape_string($conn, $_POST['login']);
+              $senha = mysqli_real_escape_string($conn, md5($_POST['senha']));
 
               include_once "restrito/conexao.php";
               $sql = "SELECT * from user_adm WHERE login = '$login' AND senha = '$senha'";

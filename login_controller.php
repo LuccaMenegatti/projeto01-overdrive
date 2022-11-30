@@ -5,8 +5,8 @@ include "restrito/conexao.php";
 if (isset($_POST['login'])) {
   
 
-  $login = $_POST['login'];
-  $senha = md5($_POST['senha']);
+  $login = mysqli_real_escape_string($conn, $_POST['login']);
+  $senha = mysqli_real_escape_string($conn, md5($_POST['senha']));
 
   $sql = "SELECT * from usuarios WHERE cpf = '$login' AND senha = '$senha'";
 
